@@ -10,13 +10,37 @@
 
 export function minBy(array, cb) {
   // Your code goes here...
-
+  if(array.length>0){
+    
+  let min = cb(array[0]);
+  let minArr = array[0];
+   
+  for (let i = 1; i < array.length; i++){ 
+      if(cb(array[i]) < min){
+       min = cb (array[i]);
+       minArr = array[i];
+      }
+    }
+   return minArr;
+  } else { return undefined }
 }
 
 export function maxBy(array, cb) {
   // Your code goes here...
-
-}
+  if(array.length>0){
+  
+  let max = cb(array[0]);
+  let maxArr = array[0];
+     
+  for (let i = 1; i < array.length; i++){
+    if(cb(array[i]) > max){
+      max = cb(array[i]);
+      maxArr = array[i];
+      }
+     }
+     return maxArr;
+    } else{ return undefined}
+  }
 
 
 // === TEST YOURSELF ===

@@ -7,8 +7,9 @@ import { data } from "../data/data";
 
 export function lowMoonsPlanets(data) {
   // Your code goes here...
-}
 
+  return data.planets.filter(planet=> !planet.moons || planet.moons.length < 10 ).map(planet => planet.name)
+}
 // === TEST YOURSELF ===
 // Once you're finished run the test with "npm run test-11"
 // If the test has all tests passed, switch to the next exercise file
